@@ -1,0 +1,16 @@
+[project]
+name = "longshot2pdf"
+version = "0.1.0"
+description = "Convert a long scrolling screenshot into a multipage PDF, breaking pages between lines of content."
+requires-python = ">=3.9"
+dependencies = ["pillow>=10", "numpy>=1.24", "img2pdf>=0.5"]
+
+[project.scripts]
+longshot2pdf = "longshot2pdf.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/longshot2pdf"]
